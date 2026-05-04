@@ -7,17 +7,8 @@ size. This file describes how to obtain them and where to place them.
 
 ## Download
 
-**TODO:** Upload the pre-trained checkpoints to an anonymous host and add the
-link here before the camera-ready deadline. Recommended options:
-
-- [Zenodo](https://zenodo.org) — free, DOI-minted, anonymous upload supported
-- [Anonymous figshare](https://figshare.com) — anonymous sharing link
-- Anonymous GitHub release on a throwaway account
-
-A placeholder link will be replaced with the actual URL:
-
 ```
-https://anonymous.4open.science/r/REPLACE_ME/
+[https://anonymous.4open.science/r/REPLACE_ME/](https://zenodo.org/records/20030944?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijk3MjkzYmE3LTA3NTUtNDQxZC1hZmViLWU3NWJjMmQ1YWI3ZiIsImRhdGEiOnt9LCJyYW5kb20iOiI3ZmUyNzE0YjZiMmZlMDU5NTM2MTNjMGVmODU5ODliYSJ9.ZXU5lQMF24yaN4w1vDW01_faJ4oWQb4fCDMiBbeZVTqJN87LQz7Hv5CM-I7S22YmEge1kfFpVDDDDh3reOOKTw)
 ```
 
 ---
