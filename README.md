@@ -63,8 +63,6 @@ python train_model.py \
 | Variant | Flag | Description |
 |---------|------|-------------|
 | `ar` (default) | `--model_variant ar` | A-RQS autoregressive flow; raw standardized context |
-| `ar_encoder_full` | `--model_variant ar_encoder_full` | GRU encoder + full A-RQS flow (K=6, H=64) — main ablation |
-| `ar_encoder_light` | `--model_variant ar_encoder_light` | GRU encoder + lighter flow (K=3, H=32) — size ablation |
 
 ### Full pipeline (all landscapes, SLURM)
 
@@ -73,7 +71,6 @@ python train_model.py \
 sbatch run_full_pipeline.sh
 
 # Override variant or landscape subset via env vars
-MODEL_VARIANT=ar_encoder_full sbatch run_full_pipeline.sh
 RUN_LANDSCAPES="single_well double_well" sbatch run_full_pipeline.sh
 ```
 
@@ -115,7 +112,7 @@ automatically restore the correct model architecture.
 bash run_all_tests.sh
 ```
 
-### Reproduce paper figures
+### Reproduce paper figure 1
 
 ```bash
 # Trajectory comparison figure (requires test output .npz)
@@ -207,7 +204,6 @@ bash run_compare_models.sh
 ├── generate_trajectories.py     # Synthetic data generation
 │
 ├── architecture.py              # A-RQS normalizing flow definition
-├── architecture_encoder.py      # GRU encoder variants
 ├── generators.py                # Synthetic Langevin dynamics generators
 ├── timing_utils.py              # Inference timing helpers
 │
@@ -219,7 +215,6 @@ bash run_compare_models.sh
 ├── sde_loader.py                # SDE data loading utilities
 ├── sde_preprocess.py            # SDE data preprocessing
 ├── splice_alanine.py            # Alanine-dipeptide data splitter
-├── splice_alanine_circular.py   # Circular-aware alanine splitter (paper version)
 │
 ├── compare.py                   # Figure generation (SVG/PNG/CSV)
 ├── compare_models.py            # Multi-model comparison figures
@@ -232,7 +227,7 @@ bash run_compare_models.sh
 ├── configs/                     # Paper figure configurations
 │   └── paper_trajectory_figure_example.json
 │
-├── scripts/                     # Figure scripts
+├── scripts/                     # Figure 1 script
 │   └── make_paper_trajectory_figure.py
 │
 ├── run_training.sh              # SLURM: single training job
